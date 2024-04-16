@@ -5,6 +5,7 @@ from OpenGL.GLU import *
 from cubo import Cube
 
 
+
 # Variables para el zoom y la rotación
 zoom_factor = 1.0
 angleX = 0.0
