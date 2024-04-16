@@ -3,7 +3,7 @@ from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
 from cubo import Cube
-
+from circulos import Sphere
 
 
 # Variables para el zoom y la rotación
@@ -14,10 +14,7 @@ angleY = 0.0
 
 #Aqui se insertan todos los metodos para hacer el dibujo
 def draw_figures():
-    
-    cubos = Cube()
-    
-    cubos.drawCubo([255, 255, 255])
+    pass
    
    
 #Metodo para establecer los dibujos    
