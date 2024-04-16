@@ -4,7 +4,7 @@ from OpenGL.GLUT import *
 from OpenGL.GLU import *
 from cubo import Cube
 from circulos import Sphere
-
+from cilindro import Cilindro
 
 # Variables para el zoom y la rotación
 zoom_factor = 1.0
