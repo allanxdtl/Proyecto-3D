@@ -2,9 +2,7 @@ import sys
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
-from cubo import Cube
-from circulos import Sphere
-from cilindro import Cilindro
+from cabeza import Cabeza
 
 # Variables para el zoom y la rotación
 zoom_factor = 1.0
@@ -14,7 +12,10 @@ angleY = 0.0
 
 #Aqui se insertan todos los metodos para hacer el dibujo
 def draw_figures():
-    pass
+    cabeza = Cabeza()
+    cabeza.DibujarCabeza()
+    
+    
    
    
 #Metodo para establecer los dibujos    
