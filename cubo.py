@@ -6,4 +6,4 @@ class Cube:
     
     def drawCubo(self, color):
         glColor3f(color[0]/255, color[1]/255, color[2]/255)
-        glutSolidCube(1.0)
+        glutSolidCube(5.0)

@@ -41,10 +41,14 @@ class Cabeza:
         glPopMatrix()
         
         #Ojo izquierdo
+        glPushMatrix()
+        
+        glPushMatrix()
         glTranslate(-2.5, 0, 5)
         glRotate(90, 0, 1, 0)
         glRotate(-20, 1, 0, 0)
         cilindritos.drawCilindro([111,84,187], 0.20, 0.7, 100, 100)
+        
         
         glTranslate(0,0, 0.50)
         glRotate(18, 1, 0, 0)
@@ -53,4 +57,12 @@ class Cabeza:
         glTranslate(0,0,0.50)
         glRotate(20, 0.50, 0, 0)
         cilindritos.drawCilindro([111,84,187], 0.20, 0.7, 100, 100)
+        glPopMatrix()
+        glPopMatrix()
+        
+        """Torso temporal
+        mover esto a su respectiva clase cuando se pueda"""
+        glTranslate(0, -4.3, 0)
+        glRotate(5, 0, 1, 0)
+        cubitos.drawCubo([255,255,255])
        
