@@ -19,3 +19,22 @@ class Cabeza:
         cilindritos.drawCilindro([111,84,187], 1, 5, 100, 100)
         glTranslate(0,0, 0.01)
         cilindritos.drawCilindro([255,255,255], 0.40, 5, 100, 100)
+        
+        #Ceja 
+        glTranslate(-1, 0.9, 5)
+        glRotate(90, 0, 1, 0)
+        glRotate(-30, 1, 0, 0)
+        cilindritos.drawCilindro([111,84,187], 0.20, 0.80, 100, 100)
+        
+        glTranslate(0,0,0.78)
+        glRotate(14, 1, 0, 0)
+        cilindritos.drawCilindro([111,84,187], 0.20, 0.5, 100, 100)
+        
+        glTranslate(0,0,0.50)
+        glRotate(30, 0.50, 0, 0)
+        cilindritos.drawCilindro([111,84,187], 0.20, 0.7, 100, 100)
+        
+        glTranslate(0,0,0.50)
+        glRotate(30, 0.50, 0, 0)
+        cilindritos.drawCilindro([111,84,187], 0.20, 0.7, 100, 100)
+       
