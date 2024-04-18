@@ -13,6 +13,7 @@ class Cabeza:
         
         #Cabeza
         circulos.drawSphere([239,238,244], 5, 100, 100)
+        glPushMatrix()
         glTranslate(3, 0.3, -0.45)
         
         #Ojo derecho y pupila
@@ -36,5 +37,20 @@ class Cabeza:
         
         glTranslate(0,0,0.50)
         glRotate(30, 0.50, 0, 0)
+        cilindritos.drawCilindro([111,84,187], 0.20, 0.7, 100, 100)
+        glPopMatrix()
+        
+        #Ojo izquierdo
+        glTranslate(-2.5, 0, 5)
+        glRotate(90, 0, 1, 0)
+        glRotate(-20, 1, 0, 0)
+        cilindritos.drawCilindro([111,84,187], 0.20, 0.7, 100, 100)
+        
+        glTranslate(0,0, 0.50)
+        glRotate(18, 1, 0, 0)
+        cilindritos.drawCilindro([111,84,187], 0.20, 0.7, 100, 100)
+        
+        glTranslate(0,0,0.50)
+        glRotate(20, 0.50, 0, 0)
         cilindritos.drawCilindro([111,84,187], 0.20, 0.7, 100, 100)
        
