@@ -13,12 +13,17 @@ class Cabeza:
         
         #Cabeza
         circulos.drawSphere([239,238,244], 5, 100, 100)
+<<<<<<< HEAD
         glPushMatrix()
         glTranslate(3, 0.3, -0.45)
+=======
+        glTranslate(3, 0.3, -0.41)
+>>>>>>> 61cc1dc (Cambios Allan)
         
         #Ojo derecho y pupila
         cilindritos.drawCilindro([111,84,187], 1, 5, 100, 100)
         glTranslate(0,0, 0.01)
+<<<<<<< HEAD
         cilindritos.drawCilindro([255,255,255], 0.40, 5, 100, 100)
         
         #Ceja 
@@ -66,3 +71,9 @@ class Cabeza:
         glRotate(5, 0, 1, 0)
         cubitos.drawCubo([255,255,255])
        
+=======
+        cilindritos.drawCilindro([255,255,255], 0.24, 5, 100, 100)
+        
+        glTranslate(-4, 0,4.375)
+        cilindritos.drawCilindro([111,84,187], 0.13, 1, 100, 100)
+>>>>>>> 61cc1dc (Cambios Allan)
