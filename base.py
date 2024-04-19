@@ -15,6 +15,9 @@ def draw_figures():
     cabeza = Cabeza()
     cabeza.DibujarCabeza()
     
+    
+   
+   
 #Metodo para establecer los dibujos    
 def draw():
     global angleX, angleY
