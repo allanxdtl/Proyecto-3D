@@ -21,7 +21,7 @@ class Cabeza:
         glTranslate(0,0, 0.01)
         cilindritos.drawCilindro([255,255,255], 0.40, 5, 100, 100)
         
-        #Ceja 
+        #Ceja derecha
         glTranslate(-1, 0.9, 5)
         glRotate(90, 0, 1, 0)
         glRotate(-30, 1, 0, 0)
@@ -55,6 +55,15 @@ class Cabeza:
         glTranslate(0,0,0.50)
         glRotate(20, 0.50, 0, 0)
         cilindritos.drawCilindro([111,84,187], 0.20, 0.7, 100, 100)
+        glPopMatrix()
+        
+        #Ceja izquierda
+        glPushMatrix()
+        glTranslatef(0, 0,5.012)
+        glTranslatef(-2.1, 1.9, -0.1)
+        glRotatef(90, 0, 1, 0)
+        glRotatef(30, 1,0,0)
+        cilindritos.drawCilindro([111,84,187], 0.2, 1.9, 100, 100)
         glPopMatrix()
         
         """Torso temporal
