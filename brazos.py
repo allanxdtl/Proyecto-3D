@@ -40,3 +40,9 @@ class Brazos:
         glTranslate(0, 0, 1)
         circulos.drawSphere([255,255,255], 0.6, 100, 100)
         glPopMatrix()
+        
+        #Pelota
+        glPushMatrix()
+        glTranslate(-4, -2.4, 1.5)
+        circulos.drawSphere([250,80,74], 1.5, 100, 100)
+        glPopMatrix()
