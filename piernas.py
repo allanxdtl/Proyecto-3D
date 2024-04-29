@@ -59,7 +59,7 @@ class Piernas:
         
         #Base figura
         glPushMatrix()
-        glTranslate(0, -5.5, 0)
+        glTranslate(0, -5.43, 0)
         glRotate(90, 1, 0, 0)
         cilindritos.drawCilindro([253, 194, 104], 4, 1, 100, 100)
         glPopMatrix()
