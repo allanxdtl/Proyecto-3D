@@ -4,6 +4,7 @@ from cilindro import Cilindro
 from OpenGL.GL import *
 from OpenGL.GLUT import *
 from OpenGL.GLU import *
+from metodos import *
 
 class Cabeza:
     def DibujarCabeza(self):
@@ -71,4 +72,38 @@ class Cabeza:
         glTranslate(0, -4.3, 0)
         glRotate(5, 0, 1, 0)
         cubitos.drawCubo([255,255,255])
+        
+        #Cabello
+        """glPushMatrix()
+        glTranslate(0, 7.0, 0)
+        circulos.drawSphere([111,84,187], 5, 100, 100)
+        glPopMatrix()"""
+        
+        #Sonrisa
+        glPushMatrix()
+        
+        glRotate(10, 1,0,0)
+        glTranslate(0, -1.88, 4.33)
+        glScale(23, 23, 0)
+        glLineWidth(5)
+        draw_lines_connected_variant([255,255,255], ([-0.2630019765707,1.2954625680823],
+                                                     [-0.0772164491156,1.3688593196695],
+                                                     [0.2393070421044,1.4124386409244],
+                                                     [0.3310529815885,1.3619783742082],
+                                                     [0.3516958179724,1.245002301366],
+                                                     [0.2507752845399,1.1509627133949],
+                                                     [0.0856325934686,1.1165579860884],
+                                                     [-0.1574941461641,1.1165579860884],
+                                                     [-0.246946437161,1.1693119012917],
+                                                     [-0.2836448129547,1.2289467619563]))
+        
+        
+        draw_line([0,0,0], (-0.1631652185078, 1.33490425028), (-0.0978592854995, 1.1165579860884))
+        draw_line([0,0,0], (0.00277112303888, 1.379872116123), (0.0856325934686,1.1165579860884))
+        draw_line([0,0,0], (0.1590293450559,1.3895021560534), (0.2507752845399,1.1509627133949))
+        
+        glPopMatrix()
+        
+        #pecas pendientes
+        
        

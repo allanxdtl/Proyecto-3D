@@ -8,6 +8,5 @@ from OpenGL.GLU import *
 class Cuerpo:
     def dibujarCuerpo(self):
         circulitos = Cilindro()
-        
         pass
     pass
