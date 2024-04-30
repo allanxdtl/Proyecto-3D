@@ -49,11 +49,23 @@ class Brazos:
         
         #Cosito de la mano
         glPushMatrix()
+        
         glTranslate(5.4,-0.2,-0.06)
         glScalef(1, 0.8,1)
         circulos.drawSphere([168,139,178], 0.63, 100, 100)
         
-        glTranslate(0, 0.5, 0)
-        circulos.drawSphere([0, 255, 255], 0.1, 100, 100)
+        #Ojitos del cosito
+        glPushMatrix()
+        glTranslate(-0.2, 0.61, 0.09)
+        circulos.drawSphere([103,83,117], 0.1, 100, 100)
+        glPopMatrix()
+        glPushMatrix()
+        glTranslate(0.2, 0.61, 0.09)
+        circulos.drawSphere([103,83,117], 0.1, 100, 100)
+        glPopMatrix()
+        glPushMatrix()
+        glTranslate(-0.1, 0.61, 0.4)
+        circulos.drawSphere([103,83,117], 0.1, 100, 100)
+        glPopMatrix()
         
         glPopMatrix()
