@@ -104,6 +104,10 @@ class Cabeza:
         
         glPopMatrix()
         
-        #pecas pendientes
+        #Cabello
+        glPushMatrix()
+        glTranslatef(0, 7.5, 0)
+        circulos.drawSphere([111,84,187], 3, 100, 100)
+        glPopMatrix()
         
        

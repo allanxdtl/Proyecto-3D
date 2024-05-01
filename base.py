@@ -11,7 +11,6 @@ zoom_factor = 1.0
 angleX = 0.0
 angleY = 0.0
 
-
 #Aqui se insertan todos los metodos para hacer el dibujo
 def draw_figures():
     cabeza = Cabeza()
@@ -46,7 +45,6 @@ def special_key_pressed(key, x, y):
         angleY += 5.0
     glutPostRedisplay()
 
-
 #Metodo para hacer zoom con la rueda del mouse
 def mouse_wheel(button, direction, x, y):
     global zoom_factor
@@ -55,7 +53,6 @@ def mouse_wheel(button, direction, x, y):
     else:
         zoom_factor *= 0.9  # Zoom out (reducir el factor de zoom)
     glutPostRedisplay()
-
 
 #Metodo para establecer parametros de la ventana y dibujo
 def main():
