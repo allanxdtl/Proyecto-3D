@@ -67,11 +67,6 @@ class Cabeza:
         cilindritos.drawCilindro([111,84,187], 0.2, 1.9, 100, 100)
         glPopMatrix()
         
-        """Torso temporal
-        mover esto a su respectiva clase cuando se pueda"""
-        glTranslate(0, -4.3, 0)
-        glRotate(5, 0, 1, 0)
-        cubitos.drawCubo([255,255,255])
         
         #Cabello
         """glPushMatrix()

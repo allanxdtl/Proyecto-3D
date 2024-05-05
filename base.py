@@ -5,6 +5,7 @@ from OpenGL.GLU import *
 from cabeza import Cabeza
 from brazos import Brazos
 from piernas import Piernas
+from torso import Torso
 
 # Variables para el zoom y la rotación
 zoom_factor = 1.0
@@ -16,9 +17,11 @@ def draw_figures():
     cabeza = Cabeza()
     brazos = Brazos()
     piernas = Piernas()
+    torso = Torso()
     cabeza.DibujarCabeza()
     brazos.DibujarBrazos()
     piernas.DibujarPiernas()
+    torso.DibujarTorso()
     
 #Metodo para establecer los dibujos    
 def draw():
