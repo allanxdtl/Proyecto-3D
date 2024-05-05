@@ -4,6 +4,6 @@ from OpenGL.GLU import *
 
 class Cube:
     
-    def drawCubo(self, color):
+    def drawCubo(self, color, size):
         glColor3f(color[0]/255, color[1]/255, color[2]/255)
-        glutSolidCube(5.0)
+        glutSolidCube(size)
