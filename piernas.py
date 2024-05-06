@@ -12,8 +12,7 @@ class Piernas:
         circulos = Sphere()
         
         glPushMatrix()
-        glTranslate(0, -4.5, 0)
-        glRotate(5, 0, 1, 0)
+        glTranslate(0, -6.6, 0)
         #Pantalones
         glPushMatrix()
         glTranslate(0, 2, 0)
