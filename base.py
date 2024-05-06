@@ -12,10 +12,11 @@ zoom_factor = 1.0
 angleX = 0.0
 angleY = 0.0
 
+brazos = Brazos()
+
 #Aqui se insertan todos los metodos para hacer el dibujo
 def draw_figures():
     cabeza = Cabeza()
-    brazos = Brazos()
     piernas = Piernas()
     torso = Torso()
     cabeza.DibujarCabeza()

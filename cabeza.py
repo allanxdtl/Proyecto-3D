@@ -104,6 +104,21 @@ class Cabeza:
         
         #Cabello
         glPushMatrix()
+        glTranslatef(3, 1.9, 0)
+        circulos.drawSphere([111,84,187], 3, 100, 100)
+        glPopMatrix()
+        
+        glPushMatrix()
+        glTranslatef(-3, 1.9, 0)
+        circulos.drawSphere([111,84,187], 3, 100, 100)
+        glPopMatrix()
+        
+        glPushMatrix()
+        glTranslatef(-3, 1.2, 0)
+        circulos.drawSphere([111,84,187], 3, 100, 100)
+        glPopMatrix()
+        
+        glPushMatrix()
         glTranslatef(0, 3.5, 0)
         circulos.drawSphere([111,84,187], 3, 100, 100)
         glPopMatrix()
@@ -189,3 +204,4 @@ class Cabeza:
         glRotate(90, 0, 1, 0)
         cilindritos.drawCilindro([111,84,187], 0.7, 7.4, 100, 100)
         glPopMatrix()
+        

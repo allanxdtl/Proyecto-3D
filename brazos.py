@@ -6,10 +6,32 @@ from OpenGL.GLUT import *
 from OpenGL.GLU import *
 
 class Brazos:
+    
+    def __init__(self):
+        self.posicion_esfera = 0.0
+        self.direccion = 1
+
+    def actualizar_posicion_esfera(self):
+        # Actualiza la posición de la esfera
+        self.posicion_esfera += 0.1 * self.direccion
+
+        # Cambia la dirección cuando la esfera llega a ciertos límites
+        if self.posicion_esfera > 5:
+            self.direccion = -1
+        elif self.posicion_esfera < -5:
+            self.direccion = 1
+            
+    def timer_callback(self, value):
+        self.actualizar_posicion_esfera()
+        glutPostRedisplay()
+        glutTimerFunc(200, self.timer_callback, 0)
+    
     def DibujarBrazos(self):
-        cubitos = Cube()
+        #self.actualizar_posicion_esfera()
         cilindritos = Cilindro()
         circulos = Sphere()
+        
+        glutTimerFunc(16, self.timer_callback, 0)
         
         glPushMatrix()
         glTranslate(0, -4.3, 0)
@@ -45,7 +67,7 @@ class Brazos:
         
         #Pelota
         glPushMatrix()
-        glTranslate(-4, -2.4, 1.3)
+        glTranslate(-4, -2.4+self.posicion_esfera, 1.3)
         circulos.drawSphere([255,0,0], 1.5, 100, 100)
         glPopMatrix()
         
@@ -69,7 +91,5 @@ class Brazos:
         glTranslate(-0.1, 0.61, 0.4)
         circulos.drawSphere([103,83,117], 0.1, 100, 100)
         glPopMatrix()
-        
         glPopMatrix()
-        
         glPopMatrix()
