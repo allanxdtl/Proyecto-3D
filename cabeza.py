@@ -104,8 +104,88 @@ class Cabeza:
         
         #Cabello
         glPushMatrix()
-        glTranslatef(0, 7.5, 0)
+        glTranslatef(0, 3.5, 0)
         circulos.drawSphere([111,84,187], 3, 100, 100)
         glPopMatrix()
         
-       
+        glPushMatrix()
+        glTranslate(1.5, 3.16, 0)
+        circulos.drawSphere([111,84,187], 3, 100, 100)
+        glPopMatrix()
+        
+        glPushMatrix()
+        glTranslate(-1.5, 3.16, 0)
+        circulos.drawSphere([111,84,187], 3, 100, 100)
+        glPopMatrix()
+        
+        glPushMatrix()
+        glTranslate(0, 2.9, -2.3)
+        circulos.drawSphere([111,84,187], 3, 100, 100)
+        glPopMatrix()
+        
+        glPushMatrix()
+        glTranslate(0, 0.9, -2.7)
+        circulos.drawSphere([111,84,187], 3, 100, 100)
+        glPopMatrix()
+        
+        glPushMatrix()
+        glTranslate(0, -0.1, -2.7)
+        circulos.drawSphere([111,84,187], 3, 100, 100)
+        glPopMatrix()
+        
+        #Segunda seccion trasera
+        glPushMatrix()
+        glTranslate(2, 2.9, -2.3)
+        circulos.drawSphere([111,84,187], 3, 100, 100)
+        glPopMatrix()
+        
+        glPushMatrix()
+        glTranslate(2, 0.9, -2.7)
+        circulos.drawSphere([111,84,187], 3, 100, 100)
+        glPopMatrix()
+        
+        glPushMatrix()
+        glTranslate(2, -0.1, -2.7)
+        circulos.drawSphere([111,84,187], 3, 100, 100)
+        glPopMatrix()
+        
+        #Tercera Seccion trasera
+        glPushMatrix()
+        glTranslate(-2, 2.9, -2.3)
+        circulos.drawSphere([111,84,187], 3, 100, 100)
+        glPopMatrix()
+        
+        glPushMatrix()
+        glTranslate(-2, 0.9, -2.7)
+        circulos.drawSphere([111,84,187], 3, 100, 100)
+        glPopMatrix()
+        
+        glPushMatrix()
+        glTranslate(-2, -0.1, -2.7)
+        circulos.drawSphere([111,84,187], 3, 100, 100)
+        glPopMatrix()
+        
+        #FINAL
+        glPushMatrix()
+        glTranslate(-3.7, -3, -3.8)
+        glRotate(90, 0, 1, 0)
+        cilindritos.drawCilindro([111,84,187], 0.7, 7.4, 100, 100)
+        glPopMatrix()
+        
+        glPushMatrix()
+        glTranslate(-3.7, -3.5, -3.8)
+        glRotate(90, 0, 1, 0)
+        cilindritos.drawCilindro([111,84,187], 0.7, 7.4, 100, 100)
+        glPopMatrix()
+        
+        glPushMatrix()
+        glTranslate(-3.7, -4.0, -3.8)
+        glRotate(90, 0, 1, 0)
+        cilindritos.drawCilindro([111,84,187], 0.7, 7.4, 100, 100)
+        glPopMatrix()
+        
+        glPushMatrix()
+        glTranslate(-3.7, -4.5, -3.8)
+        glRotate(90, 0, 1, 0)
+        cilindritos.drawCilindro([111,84,187], 0.7, 7.4, 100, 100)
+        glPopMatrix()
