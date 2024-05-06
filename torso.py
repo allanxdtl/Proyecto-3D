@@ -10,7 +10,9 @@ class Torso:
      cubitos = Cube()
      cilindritos = Cilindro()
      circulos = Sphere()
-        
+     
+     glPushMatrix()
      glTranslate(0, -4.3, 0)
      glRotate(5, 0, 1, 0)
-     cubitos.drawCubo([255,255,255])
+     cubitos.drawCubo([255,255,255], 5)
+     glPopMatrix()

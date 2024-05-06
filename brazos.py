@@ -11,6 +11,8 @@ class Brazos:
         cilindritos = Cilindro()
         circulos = Sphere()
         
+        glPushMatrix()
+        glTranslate(0, -4.3, 0)
         #Brazo izquierdo
         glPushMatrix()
         glTranslate(-4, -1.2, -0.050)
@@ -66,6 +68,8 @@ class Brazos:
         glPushMatrix()
         glTranslate(-0.1, 0.61, 0.4)
         circulos.drawSphere([103,83,117], 0.1, 100, 100)
+        glPopMatrix()
+        
         glPopMatrix()
         
         glPopMatrix()

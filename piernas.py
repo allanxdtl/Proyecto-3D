@@ -11,6 +11,9 @@ class Piernas:
         cilindritos = Cilindro()
         circulos = Sphere()
         
+        glPushMatrix()
+        glTranslate(0, -4.5, 0)
+        glRotate(5, 0, 1, 0)
         #Pantalones
         glPushMatrix()
         glTranslate(0, 2, 0)
@@ -62,5 +65,7 @@ class Piernas:
         glTranslate(0, -5.43, 0)
         glRotate(90, 1, 0, 0)
         cilindritos.drawCilindro([253, 194, 104], 4, 1, 100, 100)
+        glPopMatrix()
+        
         glPopMatrix()
         

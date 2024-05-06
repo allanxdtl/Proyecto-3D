@@ -21,7 +21,7 @@ def draw_figures():
     cabeza.DibujarCabeza()
     brazos.DibujarBrazos()
     piernas.DibujarPiernas()
-    
+    torso.DibujarTorso()
     
 #Metodo para establecer los dibujos    
 def draw():

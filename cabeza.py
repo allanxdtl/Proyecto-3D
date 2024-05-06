@@ -69,9 +69,7 @@ class Cabeza:
         
         """Torso temporal
         mover esto a su respectiva clase cuando se pueda"""
-        glTranslate(0, -4.3, 0)
-        glRotate(5, 0, 1, 0)
-        cubitos.drawCubo([255,255,255], 5)
+
         
         #Cabello
         """glPushMatrix()
@@ -83,7 +81,7 @@ class Cabeza:
         glPushMatrix()
         
         glRotate(10, 1,0,0)
-        glTranslate(0, -1.88, 4.33)
+        glTranslate(0.5, -6.5, 5.33)
         glScale(23, 23, 0)
         glLineWidth(5)
         draw_lines_connected_variant([255,255,255], ([-0.2630019765707,1.2954625680823],
