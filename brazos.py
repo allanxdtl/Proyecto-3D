@@ -9,17 +9,17 @@ class Brazos:
     
     def __init__(self):
         self.posicion_esfera = 0.0
-        self.direccion = 1
+        self.direccion = 0.5
 
     def actualizar_posicion_esfera(self):
         # Actualiza la posición de la esfera
-        self.posicion_esfera += 0.1 * self.direccion
+        self.posicion_esfera += 0.01 * self.direccion
 
         # Cambia la dirección cuando la esfera llega a ciertos límites
         if self.posicion_esfera > 5:
-            self.direccion = -1
+            self.direccion = -0.5
         elif self.posicion_esfera < -5:
-            self.direccion = 1
+            self.direccion = 0.5
             
     def timer_callback(self, value):
         self.actualizar_posicion_esfera()
@@ -40,6 +40,7 @@ class Brazos:
         glTranslate(-4, -1.2, -0.050)
         glRotate(90, 0, 1, 0)
         glRotate(-15, 1, 0, 0)
+        glRotate(45, 0, self.posicion_esfera, 0)
         cilindritos.drawCilindro([255,255,255], 0.6, 1.5, 100, 100)
         glTranslate(0, -0.2, -1)
         glRotate(-8, 1, 0, 0)

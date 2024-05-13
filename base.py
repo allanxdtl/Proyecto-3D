@@ -13,12 +13,12 @@ angleX = 0.0
 angleY = 0.0
 
 brazos = Brazos()
+cabeza = Cabeza()
+piernas = Piernas()
+torso = Torso()
 
 #Aqui se insertan todos los metodos para hacer el dibujo
 def draw_figures():
-    cabeza = Cabeza()
-    piernas = Piernas()
-    torso = Torso()
     cabeza.DibujarCabeza()
     brazos.DibujarBrazos()
     piernas.DibujarPiernas()
