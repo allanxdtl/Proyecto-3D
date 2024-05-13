@@ -7,6 +7,14 @@ from OpenGL.GLU import *
 from metodos import *
 
 class Cabeza:
+    
+    def __init__(self):
+        self.variable=0
+        self.scale_factor=0.05
+        self.scalade_up=True
+        self.scala_max=5
+        self.scala_min=1.0
+    
     def DibujarCabeza(self):
         cubitos = Cube()
         cilindritos = Cilindro()
@@ -80,9 +88,21 @@ class Cabeza:
         #Sonrisa
         glPushMatrix()
         
+        if self.scalade_up:
+            self.scale_factor+=0.05
+            if self.scale_factor >= self.scala_max:
+                self.scalade_up=False
+        else:
+            self.scale_factor-=0.05
+            if self.scale_factor <= self.scala_min:
+                self.scalade_up=True
+        
+        
         glRotate(10, 1,0,0)
-        glTranslate(0.5, -6.5, 5.33)
+        glTranslate(0.5, -6.5, 5)
         glScale(23, 23, 0)
+        #glScale(self.scale_factor, self.scale_factor, 0)
+        
         glLineWidth(5)
         draw_lines_connected_variant([255,255,255], ([-0.2630019765707,1.2954625680823],
                                                      [-0.0772164491156,1.3688593196695],
@@ -102,7 +122,32 @@ class Cabeza:
         
         glPopMatrix()
         
+        #Orejas
+        glPushMatrix()
+        glTranslate(5.3, 0, 0)
+        glScalef(1, 0.9, 0.6)
+        circulos.drawSphere([239,238,244], 1, 100, 100)
+        
+        glPopMatrix()
+        
+        glPushMatrix()
+        glTranslate(-5.3, 0, 0)
+        glScalef(1, 0.9, 0.6)
+        circulos.drawSphere([239,238,244], 1, 100, 100)
+        glPopMatrix()
+        
         #Cabello
+        
+        glPushMatrix()
+        glTranslate(3, 0.3, 0)
+        circulos.drawSphere([111,84,187], 3, 100, 100)
+        glPopMatrix()
+        
+        glPushMatrix()
+        glTranslate(-3, 0.3, 0)
+        circulos.drawSphere([111,84,187], 3, 100, 100)
+        glPopMatrix()
+        
         glPushMatrix()
         glTranslatef(3, 1.9, 0)
         circulos.drawSphere([111,84,187], 3, 100, 100)
@@ -253,42 +298,3 @@ class Cabeza:
         glScalef(0.9,1.3, 0.4)
         circulos.drawSphere([111,84,187], 1.2, 100, 100)
         glPopMatrix()
-        
-        
-        """
-        glPushMatrix()
-        glTranslate(-1.7, -4.5, -3.6)
-        glScalef(0.9,1.3, 0.4)
-        circulos.drawSphere([111,84,187], 1.2, 100, 100)
-        glPopMatrix()
-        
-        glPushMatrix()
-        glTranslate(-2.7+2, -4.5, -3.6)
-        glScalef(0.9,1.3, 0.4)
-        circulos.drawSphere([111,84,187], 1.2, 100, 100)
-        glPopMatrix()
-        
-        glPushMatrix()
-        glTranslate(-2.7+3, -4.5, -3.6)
-        glScalef(0.9,1.3, 0.4)
-        circulos.drawSphere([111,84,187], 1.2, 100, 100)
-        glPopMatrix()
-        
-        glPushMatrix()
-        glTranslate(-2.7+4, -4.5, -3.6)
-        glScalef(0.9,1.3, 0.4)
-        circulos.drawSphere([111,84,187], 1.2, 100, 100)
-        glPopMatrix()
-        
-        glPushMatrix()
-        glTranslate(-2.7+5, -4.5, -3.6)
-        glScalef(0.9,1.3, 0.4)
-        circulos.drawSphere([111,84,187], 1.2, 100, 100)
-        glPopMatrix()
-        
-        glPushMatrix()
-        glTranslate(-2.7+6, -4.5, -3.6)
-        glScalef(0.9,1.3, 0.4)
-        circulos.drawSphere([111,84,187], 1.2, 100, 100)
-        glPopMatrix()
-        """
