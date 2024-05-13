@@ -12,13 +12,21 @@ class Cabeza:
         self.variable=0
         self.scale_factor=0.05
         self.scalade_up=True
-        self.scala_max=5
+        self.scala_max=15
         self.scala_min=1.0
     
     def DibujarCabeza(self):
-        cubitos = Cube()
         cilindritos = Cilindro()
         circulos = Sphere()
+        
+        if self.scalade_up:
+            self.scale_factor+=0.05
+            if self.scale_factor >= self.scala_max:
+                self.scalade_up=False
+        else:
+            self.scale_factor-=0.05
+            if self.scale_factor <= self.scala_min:
+                self.scalade_up=True
         
         #Cabeza
         circulos.drawSphere([239,238,244], 5, 100, 100)
@@ -28,7 +36,10 @@ class Cabeza:
         #Ojo derecho y pupila
         cilindritos.drawCilindro([111,84,187], 1, 5, 100, 100)
         glTranslate(0,0, 0.01)
+        
+        glPushMatrix()
         cilindritos.drawCilindro([255,255,255], 0.40, 5, 100, 100)
+        glPopMatrix()
         
         #Ceja derecha
         glTranslate(-1, 0.9, 5)
@@ -87,17 +98,6 @@ class Cabeza:
         
         #Sonrisa
         glPushMatrix()
-        
-        if self.scalade_up:
-            self.scale_factor+=0.05
-            if self.scale_factor >= self.scala_max:
-                self.scalade_up=False
-        else:
-            self.scale_factor-=0.05
-            if self.scale_factor <= self.scala_min:
-                self.scalade_up=True
-        
-        
         glRotate(10, 1,0,0)
         glTranslate(0.5, -6.5, 5)
         glScale(23, 23, 0)
@@ -137,6 +137,29 @@ class Cabeza:
         glPopMatrix()
         
         #Cabello
+        
+        glPushMatrix()
+        glTranslate(0, 3, 1)
+        circulos.drawSphere([111,84,187], 3, 100, 100)
+        glPopMatrix()
+        
+        #Cubrir entradas
+        glPushMatrix()
+        glTranslate(-1.9, 3, 2.1)
+        circulos.drawSphere([111,84,187], 1.5, 100, 100)
+        glPopMatrix()
+        
+        glPushMatrix()
+        glTranslate(1.9, 3, 2.1)
+        circulos.drawSphere([111,84,187], 1.5, 100, 100)
+        glPopMatrix()
+        
+        #Fin cubrir entradas
+        
+        glPushMatrix()
+        glTranslate(-3, 3, 1)
+        circulos.drawSphere([111,84,187], 1, 100, 100)
+        glPopMatrix()
         
         glPushMatrix()
         glTranslate(3, 0.3, 0)

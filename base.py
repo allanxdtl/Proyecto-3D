@@ -12,6 +12,7 @@ zoom_factor = 1.0
 angleX = 0.0
 angleY = 0.0
 
+#Instancias de los componentes que se van a dibujar
 brazos = Brazos()
 cabeza = Cabeza()
 piernas = Piernas()
@@ -23,6 +24,20 @@ def draw_figures():
     brazos.DibujarBrazos()
     piernas.DibujarPiernas()
     torso.DibujarTorso()
+def setup_lighting():
+    glEnable(GL_LIGHTING)  # Habilita la iluminación
+    glEnable(GL_LIGHT0)    # Habilita la fuente de luz 0
+    
+    # Configura la posición y el color de la luz
+    light_position = [5.0, 5.0, 5.0, 1.0]  # La luz se encuentra en el punto (5, 5, 5)
+    light_color = [1.0, 1.0, 1.0, 1.0]      # Color blanco
+    glLightfv(GL_LIGHT0, GL_POSITION, light_position)
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, light_color)
+    
+    # Especifica el modelo de iluminación y el cálculo de sombras
+    glEnable(GL_COLOR_MATERIAL)
+    glEnable(GL_DEPTH_TEST)
+    glShadeModel(GL_SMOOTH)
     
 #Metodo para establecer los dibujos    
 def draw():
