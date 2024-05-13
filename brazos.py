@@ -10,6 +10,11 @@ class Brazos:
     def __init__(self):
         self.posicion_esfera = 0.0
         self.direccion = 0.5
+        self.variable=0
+        self.scale_factor=0.05
+        self.scalade_up=True
+        self.scala_max=3
+        self.scala_min=1.0
 
     def actualizar_posicion_esfera(self):
         # Actualiza la posición de la esfera
@@ -27,6 +32,16 @@ class Brazos:
         glutTimerFunc(200, self.timer_callback, 0)
     
     def DibujarBrazos(self):
+        
+        if self.scalade_up:
+            self.scale_factor+=0.05
+            if self.scale_factor >= self.scala_max:
+                self.scalade_up=False
+        else:
+            self.scale_factor-=0.05
+            if self.scale_factor <= self.scala_min:
+                self.scalade_up=True
+        
         #self.actualizar_posicion_esfera()
         cilindritos = Cilindro()
         circulos = Sphere()
@@ -68,6 +83,7 @@ class Brazos:
         
         #Pelota
         glPushMatrix()
+        glScale(self.scale_factor, self.scale_factor, self.scale_factor)
         glTranslate(-4, -2.4+self.posicion_esfera, 1.3)
         circulos.drawSphere([255,0,0], 1.5, 100, 100)
         glPopMatrix()
