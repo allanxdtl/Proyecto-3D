@@ -154,6 +154,21 @@ class Cabeza:
         circulos.drawSphere([111,84,187], 1.5, 100, 100)
         glPopMatrix()
         
+        glPushMatrix()
+        glTranslate(1.9, 3, 3)
+        circulos.drawSphere([111,84,187], 1.5, 100, 100)
+        glPopMatrix()
+        
+        glPushMatrix()
+        glTranslate(-1.9, 3, 3)
+        circulos.drawSphere([111,84,187], 1.5, 100, 100)
+        glPopMatrix()
+        
+        glPushMatrix()
+        glTranslate(0, 3, 3)
+        circulos.drawSphere([111,84,187], 1.5, 100, 100)
+        glPopMatrix()
+        
         #Fin cubrir entradas
         
         glPushMatrix()
@@ -275,49 +290,26 @@ class Cabeza:
         
         #Bolitas del final del pelo
         glPushMatrix()
-        glTranslate(-3.1, -4.5, -3.6)
-        glScalef(0.9,1.3, 0.4)
+        glTranslate(-2.6, -3.5, -3.6)
+        glScalef(1.3,1.1, 0.4)
         circulos.drawSphere([111,84,187], 1.2, 100, 100)
         glPopMatrix()
         
         glPushMatrix()
-        glTranslate(-2.9+1, -4.5, -3.6)
-        glScalef(0.9,1.3, 0.4)
+        glTranslate(-2.6+1.5, -3.5, -3.6)
+        glScalef(1.3,1.1, 0.4)
         circulos.drawSphere([111,84,187], 1.2, 100, 100)
         glPopMatrix()
         
         glPushMatrix()
-        glTranslate(-2.9+2, -4.5, -3.6)
-        glScalef(0.9,1.3, 0.4)
+        glTranslate(-2.6+(1.5*2), -3.5, -3.6)
+        glScalef(1.3,1.1, 0.4)
         circulos.drawSphere([111,84,187], 1.2, 100, 100)
         glPopMatrix()
         
-        glPushMatrix()
-        glTranslate(-2.9+3, -4.5, -3.6)
-        glScalef(0.9,1.3, 0.4)
-        circulos.drawSphere([111,84,187], 1.2, 100, 100)
-        glPopMatrix()
         
         glPushMatrix()
-        glTranslate(-2.9+4, -4.5, -3.6)
-        glScalef(0.9,1.3, 0.4)
-        circulos.drawSphere([111,84,187], 1.2, 100, 100)
-        glPopMatrix()
-        
-        glPushMatrix()
-        glTranslate(-2.9+5, -4.5, -3.6)
-        glScalef(0.9,1.3, 0.4)
-        circulos.drawSphere([111,84,187], 1.2, 100, 100)
-        glPopMatrix()
-        
-        glPushMatrix()
-        glTranslate(-2.9+5, -4.5, -3.6)
-        glScalef(0.9,1.3, 0.4)
-        circulos.drawSphere([111,84,187], 1.2, 100, 100)
-        glPopMatrix()
-        
-        glPushMatrix()
-        glTranslate(-2.9+5.9, -4.5, -3.6)
-        glScalef(0.9,1.3, 0.4)
+        glTranslate(-2.6+(1.7*3), -3.5, -3.6)
+        glScalef(1.3,1.1, 0.4)
         circulos.drawSphere([111,84,187], 1.2, 100, 100)
         glPopMatrix()
