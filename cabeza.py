@@ -169,7 +169,21 @@ class Cabeza:
         circulos.drawSphere([111,84,187], 1.5, 100, 100)
         glPopMatrix()
         
+        glPushMatrix()
+        glTranslate(0, 2.9, 3.7)
+        circulos.drawSphere([111,84,187], 1.5, 100, 100)
+        glPopMatrix()
         #Fin cubrir entradas
+        
+        
+        #COPETE
+        glPushMatrix()
+        glTranslate(-0.8,1.9,5)
+        glRotatef(-35, 1, 0, 0)
+        glScale(0.5, 0.8, 0.2)
+        circulos.drawSphere([111,84,187], 1.5, 100, 100)
+        glPopMatrix()
+        #FIN COPETE
         
         glPushMatrix()
         glTranslate(-3, 3, 1)
